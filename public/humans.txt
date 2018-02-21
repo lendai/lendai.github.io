@@ -1,0 +1,10 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+# TEAM
+
+    Daniel Mauno Pettersson -- @lendai - https://github.com/lendai
+
+# TECHNOLOGY COLOPHON
+
+React Static - https://github.com/nozzle/react-static
