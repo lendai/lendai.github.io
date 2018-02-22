@@ -2,12 +2,13 @@
   "name": "mauno.io",
   "version": "1.0.0",
   "main": "index.js",
-  "license": "",
+  "license": "UNLICENSED",
   "scripts": {
     "start": "react-static start",
     "stage": "react-static build --staging",
     "build": "react-static build",
-    "serve": "serve dist -p 3000"
+    "serve": "serve dist -p 3000",
+    "deploy": "yarn build && git-directory-deploy --directory dist/"
   },
   "dependencies": {
     "axios": "^0.16.2",
@@ -21,6 +22,7 @@
   },
   "devDependencies": {
     "eslint-config-react-tools": "1.x.x",
+    "git-directory-deploy": "^1.5.1",
     "serve": "^6.1.0"
   }
 }
