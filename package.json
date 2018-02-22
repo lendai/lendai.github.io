@@ -8,7 +8,7 @@
     "stage": "react-static build --staging",
     "build": "react-static build",
     "serve": "serve dist -p 3000",
-    "deploy": "yarn build && git-directory-deploy --directory dist/"
+    "deploy": "yarn build && git-directory-deploy --directory dist/ --branch master"
   },
   "dependencies": {
     "axios": "^0.16.2",
