@@ -32,3 +32,7 @@ body {
 .project__subtitle {
   
 }
+
+.tighter-container {
+  max-width: 600px;
+}

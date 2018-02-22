@@ -39,16 +39,19 @@ export default withSiteData(() => (
     <Section>
       <h2 className="space-above-section">Profile</h2>
       <p>I am a person that makes things happen. I manage people and projects, write code and explore ideas.</p>
-      <h2 className="space-above-section">Projects</h2>
-      {projects.map(project => (
-        <article key={project.title}>
-          <h2>{project.title}</h2>
-          {project.subtitle && <p className="project__subtitle">{project.subtitle}</p>}
-          <p>
-            {project.description}
-          </p>
-        </article>
-      ))}
+
+      <div className="tighter-container">
+        <h2 className="space-above-section">Projects</h2>
+        {projects.map(project => (
+          <article key={project.title}>
+            <h2>{project.title}</h2>
+            {project.subtitle && <p className="project__subtitle">{project.subtitle}</p>}
+            <p>
+              {project.description}
+            </p>
+          </article>
+        ))}
+      </div>
     </Section>
     <Section>
       <h2 className="space-above-section">Get in touch</h2>
