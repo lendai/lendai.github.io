@@ -332,14 +332,14 @@ var _reactDom = __webpack_require__(8);
 
 var _reactDom2 = _interopRequireDefault(_reactDom);
 
-var _app = __webpack_require__(9);
+var _App = __webpack_require__(9);
 
-var _app2 = _interopRequireDefault(_app);
+var _App2 = _interopRequireDefault(_App);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 // Export your top level component as JSX (for static rendering)
-exports.default = _app2.default;
+exports.default = _App2.default;
 
 // Render your app
 
@@ -353,7 +353,7 @@ if (typeof document !== 'undefined') {
   };
 
   // Render!
-  render(_app2.default);
+  render(_App2.default);
 }
 
 /***/ }),
@@ -433,6 +433,8 @@ var _universalImport2 = __webpack_require__(14);
 
 var _universalImport3 = _interopRequireDefault(_universalImport2);
 
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 var _react = __webpack_require__(0);
@@ -444,6 +446,8 @@ var _reactRouterDom = __webpack_require__(15);
 var _reactUniversalComponent = __webpack_require__(16);
 
 var _reactUniversalComponent2 = _interopRequireDefault(_reactUniversalComponent);
+
+var _reactStatic = __webpack_require__(2);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -459,29 +463,34 @@ var universalOptions = {
   loading: function loading() {
     return null;
   },
-  error: function error() {
-    return null;
+  error: function error(props) {
+    console.error(props.error);
+    return _react2.default.createElement(
+      'div',
+      null,
+      'An error occurred loading this page\'s template. More information is available in the console.'
+    );
   }
 };
 
 var t_0 = (0, _reactUniversalComponent2.default)((0, _universalImport3.default)({
-  id: '../src/containers/home',
+  id: '../src/containers/Home',
   file: '/Users/lendai/Code/personal/lendai.github.io/dist/react-static-routes.js',
   load: function load() {
-    return Promise.all([new Promise(function(resolve) { resolve(); }).then(__webpack_require__.bind(null, 5)), (0, _importCss3.default)('src/containers/home', {
+    return Promise.all([new Promise(function(resolve) { resolve(); }).then(__webpack_require__.bind(null, 5)), (0, _importCss3.default)('src/containers/Home', {
       disableWarnings: true
     })]).then(function (proms) {
       return proms[0];
     });
   },
   path: function path() {
-    return _path3.default.join(__dirname, '../src/containers/home');
+    return _path3.default.join(__dirname, '../src/containers/Home');
   },
   resolve: function resolve() {
     return /*require.resolve*/(5);
   },
   chunkName: function chunkName() {
-    return 'src/containers/home';
+    return 'src/containers/Home';
   }
 }), universalOptions);
 var t_1 = (0, _reactUniversalComponent2.default)((0, _universalImport3.default)({
@@ -506,32 +515,22 @@ var t_1 = (0, _reactUniversalComponent2.default)((0, _universalImport3.default)(
 }), universalOptions);
 
 // Template Map
-var templateMap = {
-  t_0: t_0,
-  t_1: t_1
+global.componentsByTemplateID = global.componentsByTemplateID || [t_0, t_1];
 
-  // Template Tree
-};var templateTree = { c: { "404": { t: "t_1" }, "/": { t: "t_0" } }
+// Template Tree
+global.templateIDsByPath = global.templateIDsByPath || {
+  '404': 1
 
   // Get template for given path
 };var getComponentForPath = function getComponentForPath(path) {
-  var parts = path === '/' ? ['/'] : path.split('/').filter(function (d) {
-    return d;
-  });
-  var cursor = templateTree;
-  try {
-    parts.forEach(function (part) {
-      cursor = cursor.c[part];
-    });
-    return templateMap[cursor.t];
-  } catch (e) {
-    return false;
-  }
+  path = (0, _reactStatic.cleanPath)(path);
+  return global.componentsByTemplateID[global.templateIDsByPath[path]];
 };
 
-if (typeof document !== 'undefined') {
-  window.reactStaticGetComponentForPath = getComponentForPath;
-}
+global.reactStaticGetComponentForPath = getComponentForPath;
+global.reactStaticRegisterTemplateIDForPath = function (path, id) {
+  global.templateIDsByPath[path] = id;
+};
 
 var Routes = function (_Component) {
   _inherits(Routes, _Component);
@@ -550,25 +549,40 @@ var Routes = function (_Component) {
           render = _props.render,
           children = _props.children;
 
-      var renderProps = {
-        templateMap: templateMap,
-        templateTree: templateTree,
-        getComponentForPath: getComponentForPath
+
+      var getFullComponentForPath = function getFullComponentForPath(path) {
+        var Comp = getComponentForPath(path);
+        var is404 = path === '404';
+        if (!Comp) {
+          is404 = true;
+          Comp = getComponentForPath('404');
+        }
+        return function (newProps) {
+          return Comp ? _react2.default.createElement(Comp, _extends({}, newProps, is404 ? { is404: true } : {})) : null;
+        };
       };
+
+      var renderProps = {
+        componentsByTemplateID: global.componentsByTemplateID,
+        templateIDsByPath: global.templateIDsByPath,
+        getComponentForPath: getFullComponentForPath
+      };
+
       if (Comp) {
         return _react2.default.createElement(Comp, renderProps);
       }
+
       if (render || children) {
         return (render || children)(renderProps);
       }
 
       // This is the default auto-routing renderer
       return _react2.default.createElement(_reactRouterDom.Route, { path: '*', render: function render(props) {
-          var Comp = getComponentForPath(props.location.pathname);
-          if (!Comp) {
-            Comp = getComponentForPath('404');
-          }
-          return Comp && _react2.default.createElement(Comp, props);
+          var Comp = getFullComponentForPath(props.location.pathname);
+          // If Comp is used as a component here, it triggers React to re-mount the entire
+          // component tree underneath during reconciliation, losing all internal state.
+          // By unwrapping it here we keep the real, static component exposed directly to React.
+          return Comp && Comp(_extends({}, props, { key: props.location.pathname }));
         } });
     }
   }]);
@@ -732,9 +746,13 @@ function universal(component) {
           return Promise.reject(error);
         }
 
-        if (Component) return Promise.resolve(Component);
-
-        return requireAsync(props, context);
+        return Promise.resolve().then(function () {
+          if (Component) return Component;
+          return requireAsync(props, context);
+        }).then(function (Component) {
+          (0, _hoistNonReactStatics2.default)(UniversalComponent, Component, { preload: true });
+          return Component;
+        });
       }
     }]);
 
@@ -750,6 +768,7 @@ function universal(component) {
 
         if (!_this._mounted) return;
         if (!state.error) state.error = null;
+
         _this.handleAfter(state, isMount, isSync, isServer);
       };
 
@@ -925,11 +944,11 @@ function universal(component) {
           return (0, _utils.createElement)(Loading, props);
         } else if (userError) {
           return (0, _utils.createElement)(Err, _extends({}, props, { error: userError }));
+        } else if (error) {
+          return (0, _utils.createElement)(Err, _extends({}, props, { error: error }));
         } else if (Component) {
           // primary usage (for async import loading + errors):
           return (0, _utils.createElement)(Component, props);
-        } else if (error) {
-          return (0, _utils.createElement)(Err, _extends({}, props, { error: error }));
         }
 
         return (0, _utils.createElement)(Loading, props);
@@ -1681,11 +1700,101 @@ exports.default = ContactSection;
 
 /***/ }),
 /* 34 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(35)(false);
+// imports
+exports.push([module.i, "@import url(https://fonts.googleapis.com/css?family=Libre+Baskerville:400,700|Montserrat:400,700);", ""]);
+
+// module
+exports.push([module.i, "figure{margin:0;padding:0}body,html{font-size:10px}body{font-family:Montserrat,sans-serif;font-weight:300;background:#335e6f;margin:0;padding:0;font-size:1.6rem}a{text-decoration:none;color:#108db8;font-weight:700}a:hover{color:#267f9c;text-decoration:underline}.header__name{margin:0;font-family:Libre Baskerville;font-size:6.4rem;line-height:1.35;font-weight:700}.landing-page{max-width:1200px;width:90%;display:-ms-flexbox;display:flex;-ms-flex-align:center;align-items:center;-ms-flex-pack:left;justify-content:left;padding:20px;margin:0 auto;color:#fff;font-size:1.6rem;height:100vh;min-height:500px}.ingress-section{background:#263e4a;padding:100px 0;color:#fff;font-size:3rem;text-align:center;font-family:Libre Baskerville;line-height:170%}.projects-section{background:#f2f4f4}.tighter-container{max-width:800px;margin:0 auto}.contact-section{background:#263e4a;display:-ms-flexbox;display:flex;-ms-flex-align:center;align-items:center;-ms-flex-pack:center;justify-content:center;padding:20px;margin:0 auto;font-size:3rem;line-height:1.4;height:100vh;min-height:500px;color:#fff}.contact__waving-hand{font-size:5rem;display:inline-block;padding-top:20px}.container{margin:0 auto;max-width:1200px;width:90%}.project{display:-ms-flexbox;display:flex;margin-bottom:60px}.project-icon{border-radius:50%;background:#fff;min-width:200px;max-width:200px;line-height:200px;height:200px;margin-right:40px;text-align:center}.project-icon>img{width:60%;vertical-align:middle}.project--dooer .project-icon>img{width:50%;-webkit-transform:translateX(2%);-ms-transform:translateX(2%);transform:translateX(2%)}.project--uppcon .project-icon>img{width:36%}.project--sj .project-icon>img{width:44%}.project--bidster .project-icon>img{width:56%}.projects-section-title{padding-top:60px;padding-bottom:40px;font-size:2.8rem;font-weight:200;text-align:center}.project__description{line-height:1.4}@media only screen and (max-width:420px){.header__name{font-size:6rem}.project{-ms-flex-flow:column;flex-flow:column;-ms-flex-align:center;align-items:center}.project-icon>img{width:70%}.project-icon{min-width:100px;max-width:100px;height:100px;line-height:100px;margin-right:0}}", ""]);
+
+// exports
+
+
+/***/ }),
+/* 35 */
 /***/ (function(module, exports) {
 
-// removed by extract-text-webpack-plugin
+/*
+	MIT License http://www.opensource.org/licenses/mit-license.php
+	Author Tobias Koppers @sokra
+*/
+// css base code, injected by the css-loader
+module.exports = function(useSourceMap) {
+	var list = [];
+
+	// return the list of modules as css string
+	list.toString = function toString() {
+		return this.map(function (item) {
+			var content = cssWithMappingToString(item, useSourceMap);
+			if(item[2]) {
+				return "@media " + item[2] + "{" + content + "}";
+			} else {
+				return content;
+			}
+		}).join("");
+	};
+
+	// import a list of modules into the list
+	list.i = function(modules, mediaQuery) {
+		if(typeof modules === "string")
+			modules = [[null, modules, ""]];
+		var alreadyImportedModules = {};
+		for(var i = 0; i < this.length; i++) {
+			var id = this[i][0];
+			if(typeof id === "number")
+				alreadyImportedModules[id] = true;
+		}
+		for(i = 0; i < modules.length; i++) {
+			var item = modules[i];
+			// skip already imported module
+			// this implementation is not 100% perfect for weird media query combinations
+			//  when a module is imported multiple times with different media queries.
+			//  I hope this will never occur (Hey this way we have smaller bundles)
+			if(typeof item[0] !== "number" || !alreadyImportedModules[item[0]]) {
+				if(mediaQuery && !item[2]) {
+					item[2] = mediaQuery;
+				} else if(mediaQuery) {
+					item[2] = "(" + item[2] + ") and (" + mediaQuery + ")";
+				}
+				list.push(item);
+			}
+		}
+	};
+	return list;
+};
+
+function cssWithMappingToString(item, useSourceMap) {
+	var content = item[1] || '';
+	var cssMapping = item[3];
+	if (!cssMapping) {
+		return content;
+	}
+
+	if (useSourceMap && typeof btoa === 'function') {
+		var sourceMapping = toComment(cssMapping);
+		var sourceURLs = cssMapping.sources.map(function (source) {
+			return '/*# sourceURL=' + cssMapping.sourceRoot + source + ' */'
+		});
+
+		return [content].concat(sourceURLs).concat([sourceMapping]).join('\n');
+	}
+
+	return [content].join('\n');
+}
+
+// Adapted from convert-source-map (MIT)
+function toComment(sourceMap) {
+	// eslint-disable-next-line no-undef
+	var base64 = btoa(unescape(encodeURIComponent(JSON.stringify(sourceMap))));
+	var data = 'sourceMappingURL=data:application/json;charset=utf-8;base64,' + base64;
+
+	return '/*# ' + data + ' */';
+}
+
 
 /***/ })
 /******/ ]);
 });
-//# sourceMappingURL=static.5f01506a.js.map
+//# sourceMappingURL=static.48dec41b.js.map
