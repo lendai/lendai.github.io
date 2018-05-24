@@ -44,7 +44,7 @@ const Projects = () => (
         </article>
       ))}
 
-      <div style={{ width: '70%', margin: '60px auto', color: '#232323', fontSize: '15px', lineHeight: '1.6', textAlign: 'center' }}>
+      <div style={{ width: '90%', margin: '60px auto', color: '#232323', fontSize: '15px', lineHeight: '1.6', textAlign: 'center' }}>
         <p>
           {'During my time at Agigen I\'ve worked with a wide variety of high profile brands and agencys.'}<br />
           {`A few of them are; ${extraBrands.join(', ')}`}
