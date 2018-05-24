@@ -6,7 +6,7 @@ export default {
   getRoutes: async () => [
     {
       path: '/',
-      component: 'src/containers/home',
+      component: 'src/containers/Home',
     },
     {
       is404: true,
@@ -21,7 +21,9 @@ export default {
   },
   Document: class CustomDocument extends Component {
     render () {
-      const { Html, Head, Body, children, renderMeta } = this.props
+      const {
+ Html, Head, Body, children, renderMeta 
+} = this.props
 
       return (
         <Html>

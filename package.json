@@ -7,12 +7,10 @@
     "start": "react-static start",
     "stage": "react-static build --staging",
     "build": "react-static build",
-    "serve": "serve dist -p 3000",
-    "deploy": "yarn build && git-directory-deploy --directory dist/ --branch master"
+    "deploy": "yarn build && git-directory-deploy --verbose --directory dist/ --branch master"
   },
   "dependencies": {
     "glamor": "^2.20.40",
-    "glamorous": "^4.9.7",
     "prop-types": "^15.6.0",
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
@@ -21,7 +19,6 @@
   },
   "devDependencies": {
     "eslint-config-react-tools": "1.x.x",
-    "git-directory-deploy": "^1.5.1",
-    "serve": "^6.1.0"
+    "git-directory-deploy": "^1.5.1"
   }
 }
