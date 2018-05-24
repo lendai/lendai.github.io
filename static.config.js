@@ -12,10 +12,6 @@ export default {
         component: 'src/containers/Home',
       },
       {
-        path: '/about',
-        component: 'src/containers/About',
-      },
-      {
         path: '/blog',
         component: 'src/containers/Blog',
         getData: () => ({
@@ -51,6 +47,7 @@ export default {
             <meta charSet="UTF-8" />
             <meta name="viewport" content="width=device-width, initial-scale=1" />
             <style dangerouslySetInnerHTML={{ __html: renderMeta.glamStyles }} />
+            <title>Daniel Mauno Pettersson</title>
           </Head>
           <Body>
             {children}

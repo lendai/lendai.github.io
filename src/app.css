@@ -1,4 +1,10 @@
 @import url('https://fonts.googleapis.com/css?family=Libre+Baskerville:400,700|Montserrat:400,700');
+
+figure {
+  margin: 0;
+  padding: 0;
+}
+
 html {
   font-size: 10px;
 }
@@ -6,10 +12,18 @@ body {
   font-family: 'Montserrat', sans-serif;
   font-weight: 300;
   font-size: 10px;
-  background: #ccc;
+  background:#335E6F;
   margin: 0;
   padding: 0;
   font-size: 1.6rem;
+}
+
+.header__name {
+  margin: 0;
+  font-family: 'Libre Baskerville';
+  font-size: 6.4rem;
+  line-height: 1.35;
+  font-weight: bold;
 }
 
 .landing-page {
@@ -19,20 +33,117 @@ body {
   align-items: center;
   justify-content: left;
   padding: 20px; 
-  margin: 0 auto;
+  margin: 0 auto; 
+  color: #fff;
   font-size: 1.6rem;
   height: 100vh;
   min-height: 500px;
 }
 
-.landing-page__main-section {
+.ingress-section {
+  background: #263E4A;
+  padding: 100px 0;
+  color: #fff;
 
+  font-size: 3rem;
+  text-align: center;
+  font-family: 'Libre Baskerville';
+  line-height: 170%;
 }
 
-.project__subtitle {
-  
+.projects-section {
+  background: #f2f4f4;
 }
 
 .tighter-container {
-  max-width: 600px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.contact-secion {
+  background: #263E4A;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px; 
+  margin: 0 auto;
+  font-size: 3rem;
+  line-height: 1.4;
+  height: 100vh;
+  min-height: 500px;
+  color: #fff;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1200px; 
+  width: 90%; 
+}
+
+.project {
+  display: flex;
+  margin-bottom: 60px;
+}
+
+.project-icon {
+  border-radius: 50%;
+  background: #fff;
+  min-width: 200px;
+  max-width: 200px;
+  line-height: 200px;
+  height: 200px;
+  margin-right: 40px;
+  text-align: center;
+}
+
+.project-icon > img {
+  width: 60%;
+  vertical-align: middle;
+}
+
+.project--dooer .project-icon > img {
+  width: 50%;
+  transform: translateX(2%)
+}
+
+.project--uppcon .project-icon > img {
+  width: 36%;
+}
+
+.project--sj .project-icon > img {
+  width: 44%;
+}
+
+.project--bidster .project-icon > img {
+  width: 56%;
+}
+
+.projects-section-title {
+  padding-top: 60px;
+  padding-bottom: 40px;
+  font-size: 2.8rem;
+  font-weight: 200;
+  text-align: center;
+}
+
+.project__description {
+  line-height: 1.4;
+}
+
+@media only screen and (max-width : 420px) {
+  .header__name {
+    font-size: 6rem;
+  }
+
+  .project {
+    flex-flow: column;
+    align-items: center;
+  }
+
+  .project-icon {
+    min-width: 100px;
+    max-width: 100px;
+    height: 100px;
+    line-height: 100px;
+  }
 }
