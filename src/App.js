@@ -7,9 +7,9 @@ import './app.css'
 
 const App = () => (
   <Router>
-    <div className="content">
+    <main className="content">
       <Routes />
-    </div>
+    </main>
   </Router>
 )
 

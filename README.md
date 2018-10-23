@@ -12,5 +12,5 @@ yarn start
 ## Deploying
 ```
 yarn
-yarn build
+yarn deploy
 ```

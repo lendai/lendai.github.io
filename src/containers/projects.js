@@ -1,11 +1,22 @@
 import dooerLogo from '../img/dooerlogo.svg'
 import agigenLogo from '../img/agigenlogo.png'
+import alchemyLogo from '../img/alchemylogo.svg'
 import ahlensLogo from '../img/ahlenslogo.svg'
 import billoLogo from '../img/billogramlogo.svg'
 import googleLogo from '../img/googlelogo.svg'
 import uppconLogo from '../img/uppconlogo.svg'
 import bidsterLogo from '../img/bidsterlogo.png'
 import sjLogo from '../img/sjlogo.svg'
+
+const alchemy = {
+  title: 'Alchemy / NORD DDB',
+  slug: 'alchemy',
+  when: 'Sept 2018 - now',
+  subtitle: 'Head of Technology & Products',
+  logotype: alchemyLogo,
+  involved: '',
+  description: 'Product & service design studio. I hold Tech Director role in most projects and are in charge of building the tech team. Working with clients such as Vattenfall, Volkswagen, Klarna.',
+}
 
 const dooer = {
   title: 'Dooer',
@@ -14,7 +25,7 @@ const dooer = {
   subtitle: 'Head of Product & Development',
   logotype: dooerLogo,
   involved: '',
-  description: 'Fintech startup that acquired Agigen in 2016. Managed a team of about 30 developers, designers and team leads. The project included microservices, GraphQL and machine learning.',
+  description: 'Fintech startup that acquired Agigen in 2016. Managed a team of about 30 developers, designers and team leads accross three locations. The project included microservices, GraphQL and machine learning.',
 }
 
 const agigen = {
@@ -81,13 +92,14 @@ const uppcon = {
   title: 'UppCon',
   slug: 'uppcon',
   when: '2001-2012',
-  subtitle: 'Founder',
+  subtitle: 'Founder & Head Organizer',
   logotype: uppconLogo,
   involved: '',
   description: 'Scandinavias largest event for youths interested in Japanese popular culture. A non-profit I founded which attracted around 5000 visitors during four days at it\'s peak',
 }
 
 export default [
+  alchemy,
   dooer,
   agigen,
   billogram,
