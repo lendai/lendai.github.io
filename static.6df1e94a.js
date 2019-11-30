@@ -1353,7 +1353,11 @@ var Projects = function Projects() {
             _react2.default.createElement(
               'div',
               { className: 'project-icon' },
-              _react2.default.createElement('img', { src: project.logotype, alt: 'Dooer Logo' })
+              typeof project.logotype === 'function' ? _react2.default.createElement(
+                _react2.default.Fragment,
+                null,
+                project.logotype()
+              ) : _react2.default.createElement('img', { src: project.logotype, alt: project.title })
             ),
             _react2.default.createElement(
               'figcaption',
@@ -1393,7 +1397,9 @@ var Projects = function Projects() {
       }),
       _react2.default.createElement(
         'div',
-        { style: { width: '90%', margin: '60px auto', color: '#232323', fontSize: '15px', lineHeight: '1.6', textAlign: 'center' } },
+        { style: {
+            width: '90%', margin: '60px auto', color: '#232323', fontSize: '15px', lineHeight: '1.6', textAlign: 'center'
+          } },
         _react2.default.createElement(
           'p',
           null,
@@ -1463,6 +1469,10 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
 var _dooerlogo = __webpack_require__(25);
 
 var _dooerlogo2 = _interopRequireDefault(_dooerlogo);
@@ -1501,14 +1511,34 @@ var _sjlogo2 = _interopRequireDefault(_sjlogo);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+var freelance = {
+  title: 'Freelance ',
+  slug: 'freelance',
+  when: 'May 2019 - now',
+  subtitle: 'CTO / Fullstack developer',
+  logotype: function logotype() {
+    return _react2.default.createElement(
+      'div',
+      { style: { fontSize: 50 } },
+      _react2.default.createElement(
+        'span',
+        { role: 'img', 'aria-label': 'Coffee emoji' },
+        '\u2615'
+      )
+    );
+  },
+  involved: '',
+  description: 'Helping both startups and established businesses with strategy, hiring, architecture and development. Feel free to hire me :)'
+};
+
 var alchemy = {
   title: 'Alchemy / NORD DDB',
   slug: 'alchemy',
-  when: 'Sept 2018 - now',
+  when: 'Sept 2018 - May 2019',
   subtitle: 'Head of Technology & Products',
   logotype: _alchemylogo2.default,
   involved: '',
-  description: 'Product & service design studio. I hold Tech Director role in most projects and are in charge of building the tech team. Working with clients such as Vattenfall, Volkswagen, Klarna.'
+  description: 'Product & service design studio. I hold Tech Director role in most projects and are in charge of building the tech team. Working with clients such as DHL, Musikhjälpen, Vattenfall, Volkswagen, Klarna.'
 };
 
 var dooer = {
@@ -1591,7 +1621,7 @@ var uppcon = {
   description: 'Scandinavias largest event for youths interested in Japanese popular culture. A non-profit I founded which attracted around 5000 visitors during four days at it\'s peak'
 };
 
-exports.default = [alchemy, dooer, agigen, billogram, ahlens, build, sj, uppcon, bidster];
+exports.default = [freelance, alchemy, dooer, agigen, billogram, ahlens, build, sj, uppcon, bidster];
 
 /***/ }),
 /* 25 */
@@ -1817,4 +1847,4 @@ function toComment(sourceMap) {
 /***/ })
 /******/ ]);
 });
-//# sourceMappingURL=static.0ae15ccd.js.map
+//# sourceMappingURL=static.6df1e94a.js.map
