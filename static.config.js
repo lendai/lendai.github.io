@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 import { renderStaticOptimized } from 'glamor/server'
 
 export default {
-  siteRoot: 'https://www.mauno.io',
+  siteRoot: 'https://mauno.io',
   getRoutes: async () => [
     {
       path: '/',
