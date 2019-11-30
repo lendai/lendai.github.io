@@ -3,6 +3,7 @@ import React, { Component } from 'react'
 import { renderStaticOptimized } from 'glamor/server'
 
 export default {
+  siteRoot: 'https://www.mauno.io',
   getRoutes: async () => [
     {
       path: '/',
@@ -22,8 +23,8 @@ export default {
   Document: class CustomDocument extends Component {
     render () {
       const {
- Html, Head, Body, children, renderMeta 
-} = this.props
+        Html, Head, Body, children, renderMeta,
+      } = this.props
 
       return (
         <Html>
