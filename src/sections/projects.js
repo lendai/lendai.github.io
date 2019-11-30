@@ -26,13 +26,17 @@ const Projects = () => (
         <article key={project.title} className={`project--${project.slug}`}>
           <figure className="project">
             <div className="project-icon">
-              <img src={project.logotype} alt="Dooer Logo" />
+              {(typeof project.logotype === 'function') ? (
+                <React.Fragment>{project.logotype()}</React.Fragment>
+              ) : (
+                <img src={project.logotype} alt={project.title} />
+              )}
             </div>
             <figcaption>
               <h2>{project.title}</h2>
               <p className="project__subtitle">
                 {project.when && <span>{project.when}</span>}
-                {(project.when && project.subtitle) ? <span>{', '}</span> : null}
+                {(project.when && project.subtitle) ? <span>, </span> : null}
                 {project.subtitle && <span>{project.subtitle}</span>}
               </p>
               <p className="project__description">
@@ -44,13 +48,15 @@ const Projects = () => (
         </article>
       ))}
 
-      <div style={{ width: '90%', margin: '60px auto', color: '#232323', fontSize: '15px', lineHeight: '1.6', textAlign: 'center' }}>
+      <div style={{
+ width: '90%', margin: '60px auto', color: '#232323', fontSize: '15px', lineHeight: '1.6', textAlign: 'center',
+}}>
         <p>
           {'During my time at Agigen I\'ve worked with a wide variety of high profile brands and agencys.'}<br />
           {`A few of them are; ${extraBrands.join(', ')}`}
         </p>
         <p>
-          <a href="#contact">{'Get in touch'}</a>{' to learn more'}
+          <a href="#contact">Get in touch</a>{' to learn more'}
         </p>
       </div>
     </div>

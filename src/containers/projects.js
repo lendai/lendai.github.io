@@ -1,3 +1,4 @@
+import React from 'react'
 import dooerLogo from '../img/dooerlogo.svg'
 import agigenLogo from '../img/agigenlogo.png'
 import alchemyLogo from '../img/alchemylogo.svg'
@@ -8,14 +9,26 @@ import uppconLogo from '../img/uppconlogo.svg'
 import bidsterLogo from '../img/bidsterlogo.png'
 import sjLogo from '../img/sjlogo.svg'
 
+const freelance = {
+  title: 'Freelance ',
+  slug: 'freelance',
+  when: 'May 2019 - now',
+  subtitle: 'CTO / Fullstack developer',
+  logotype: () => (
+    <div style={{ fontSize: 50 }}><span role="img" aria-label="Coffee emoji">☕</span></div>
+  ),
+  involved: '',
+  description: 'Helping both startups and established businesses with strategy, hiring, architecture and development. Feel free to hire me :)',
+}
+
 const alchemy = {
   title: 'Alchemy / NORD DDB',
   slug: 'alchemy',
-  when: 'Sept 2018 - now',
+  when: 'Sept 2018 - May 2019',
   subtitle: 'Head of Technology & Products',
   logotype: alchemyLogo,
   involved: '',
-  description: 'Product & service design studio. I hold Tech Director role in most projects and are in charge of building the tech team. Working with clients such as Vattenfall, Volkswagen, Klarna.',
+  description: 'Product & service design studio. I hold Tech Director role in most projects and are in charge of building the tech team. Working with clients such as DHL, Musikhjälpen, Vattenfall, Volkswagen, Klarna.',
 }
 
 const dooer = {
@@ -99,6 +112,7 @@ const uppcon = {
 }
 
 export default [
+  freelance,
   alchemy,
   dooer,
   agigen,
