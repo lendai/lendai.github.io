@@ -265,7 +265,7 @@ var _projects = __webpack_require__(22);
 
 var _projects2 = _interopRequireDefault(_projects);
 
-var _contact = __webpack_require__(34);
+var _contact = __webpack_require__(35);
 
 var _contact2 = _interopRequireDefault(_contact);
 
@@ -385,7 +385,7 @@ var _reactStaticRoutes = __webpack_require__(11);
 
 var _reactStaticRoutes2 = _interopRequireDefault(_reactStaticRoutes);
 
-__webpack_require__(35);
+__webpack_require__(36);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -475,7 +475,7 @@ var universalOptions = {
 
 var t_0 = (0, _reactUniversalComponent2.default)((0, _universalImport3.default)({
   id: '../src/containers/Home',
-  file: '/Users/lendai/Code/personal/lendai.github.io/dist/react-static-routes.js',
+  file: '/Users/lendai/Code/mauno/lendai.github.io/dist/react-static-routes.js',
   load: function load() {
     return Promise.all([new Promise(function(resolve) { resolve(); }).then(__webpack_require__.bind(null, 5)), (0, _importCss3.default)('src/containers/Home', {
       disableWarnings: true
@@ -495,7 +495,7 @@ var t_0 = (0, _reactUniversalComponent2.default)((0, _universalImport3.default)(
 }), universalOptions);
 var t_1 = (0, _reactUniversalComponent2.default)((0, _universalImport3.default)({
   id: '../src/containers/404',
-  file: '/Users/lendai/Code/personal/lendai.github.io/dist/react-static-routes.js',
+  file: '/Users/lendai/Code/mauno/lendai.github.io/dist/react-static-routes.js',
   load: function load() {
     return Promise.all([new Promise(function(resolve) { resolve(); }).then(__webpack_require__.bind(null, 6)), (0, _importCss3.default)('src/containers/404', {
       disableWarnings: true
@@ -1501,20 +1501,34 @@ var _uppconlogo = __webpack_require__(31);
 
 var _uppconlogo2 = _interopRequireDefault(_uppconlogo);
 
-var _bidsterlogo = __webpack_require__(32);
+var _memmologo = __webpack_require__(32);
+
+var _memmologo2 = _interopRequireDefault(_memmologo);
+
+var _bidsterlogo = __webpack_require__(33);
 
 var _bidsterlogo2 = _interopRequireDefault(_bidsterlogo);
 
-var _sjlogo = __webpack_require__(33);
+var _sjlogo = __webpack_require__(34);
 
 var _sjlogo2 = _interopRequireDefault(_sjlogo);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+var memmo = {
+  title: 'Memmo ',
+  slug: 'memmo',
+  when: 'Nov 2019 - now',
+  subtitle: 'CTO',
+  logotype: _memmologo2.default,
+  involved: '',
+  description: 'Platform connecting talent with their following. Offering personalized video greetings. Node / GraphQL / React / React Native / Google Cloud.'
+};
+
 var freelance = {
   title: 'Freelance ',
   slug: 'freelance',
-  when: 'May 2019 - now',
+  when: 'May 2019 - Nov 2019',
   subtitle: 'CTO / Fullstack developer',
   logotype: function logotype() {
     return _react2.default.createElement(
@@ -1528,7 +1542,7 @@ var freelance = {
     );
   },
   involved: '',
-  description: 'Helping both startups and established businesses with strategy, hiring, architecture and development. Feel free to hire me :)'
+  description: 'Helping both startups and established businesses with strategy, hiring, architecture and development.'
 };
 
 var alchemy = {
@@ -1538,7 +1552,7 @@ var alchemy = {
   subtitle: 'Head of Technology & Products',
   logotype: _alchemylogo2.default,
   involved: '',
-  description: 'Product & service design studio. I hold Tech Director role in most projects and are in charge of building the tech team. Working with clients such as DHL, Musikhjälpen, Vattenfall, Volkswagen, Klarna.'
+  description: 'Product & service design studio. I held the Tech Director role in most projects and was in charge of building the tech team. Working with clients such as DHL, Musikhjälpen, Vattenfall, Volkswagen, Klarna.'
 };
 
 var dooer = {
@@ -1558,7 +1572,7 @@ var agigen = {
   subtitle: 'CEO & Founder',
   logotype: _agigenlogo2.default,
   involved: '',
-  description: 'Before joining Dooer I ran a digital production agency focused on high profile marketing campaigns and product development. We were fifteen employees when acquired by Dooer.'
+  description: 'My first own company. A digital production agency focused on high profile marketing campaigns and product development. We were fifteen employees when acquired by Dooer.'
 };
 
 var billogram = {
@@ -1608,7 +1622,7 @@ var bidster = {
   subtitle: 'Fullstack Developer',
   logotype: _bidsterlogo2.default,
   involved: '',
-  description: 'My first full-time job in tech. Developer for the startup Bidster, that did lowest-unique-bid auctions.'
+  description: 'My first full-time job in tech. Developer for the startup Bidster, a platform for lowest-unique-bid auctions.'
 };
 
 var uppcon = {
@@ -1618,10 +1632,10 @@ var uppcon = {
   subtitle: 'Founder & Head Organizer',
   logotype: _uppconlogo2.default,
   involved: '',
-  description: 'Scandinavias largest event for youths interested in Japanese popular culture. A non-profit I founded which attracted around 5000 visitors during four days at it\'s peak'
+  description: 'Scandinavias largest event for youths interested in Japanese popular culture. A non-profit I founded which attracted around 5000 visitors during four days at its peak'
 };
 
-exports.default = [freelance, alchemy, dooer, agigen, billogram, ahlens, build, sj, uppcon, bidster];
+exports.default = [memmo, freelance, alchemy, dooer, agigen, billogram, ahlens, build, sj, uppcon, bidster];
 
 /***/ }),
 /* 25 */
@@ -1667,18 +1681,24 @@ module.exports = "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGlu
 
 /***/ }),
 /* 32 */
+/***/ (function(module, exports) {
+
+module.exports = "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDIzLjEuMSwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IgoJIHZpZXdCb3g9IjAgMCA3NTUgMTE5IiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCA3NTUgMTE5OyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+CjxzdHlsZSB0eXBlPSJ0ZXh0L2NzcyI+Cgkuc3Qwe2ZpbGw6I2Y4Mjg0ZTt9Cjwvc3R5bGU+CjxwYXRoIGNsYXNzPSJzdDAiIGQ9Ik0xNDguNSwxNS4xQzE0MC4zLDYuNywxMjkuNywyLDExNi42LDAuOGMtMTQuMi0xLjItMjYuNSwzLjctMzYuMSwxMy44QzcwLjksNC4zLDU4LjgtMC40LDQ0LjMsMC44CglDMzEuNiwyLDIxLDYuOSwxMywxNS4xQzQuMywyNCwwLDM1LjcsMCw1MHY2Ni41aDI4LjdWNDguNGMwLTYuMywxLjctMTEuMiw1LjEtMTUuNWMzLjEtMy43LDctNS40LDEyLTUuNGM1LjgsMCwxMC42LDEuNiwxNC43LDUuNAoJYzMuOSwzLjUsNS44LDcuNSw1LjgsMTIuN3Y3MWgyOC45VjQ1LjNjMC01LjIsMS45LTkuMSw1LjgtMTIuN2M0LjEtMy41LDguOS01LjQsMTQuNy01LjRjNS4zLDAsOS4yLDEuOSwxMi4zLDUuNgoJYzMuNiw0LjIsNS4zLDkuMSw1LjMsMTUuMnY2OC4yaDI4LjdWNTBDMTYxLjcsMzUuNywxNTcuMSwyNCwxNDguNSwxNS4xeiIvPgo8cGF0aCBjbGFzcz0ic3QwIiBkPSJNMjg5LjcsNTdjMC0xNC4xLTUuNS0yNi45LTE2LjYtMzguNEMyNjIsNy40LDI0OC4yLDEsMjMyLjgsMC4xYy0xNy40LTAuOS0zMi41LDQuNy00NS4xLDE2LjkKCWMtMTIuNSwxMi4yLTE4LjgsMjYuNy0xOC4zLDQzLjZjMC4yLDE1LjksNi41LDI5LjgsMTguOCw0MS4yYzExLjgsMTEuMiwyNS44LDE2LjksNDEuMiwxNi45YzAuMiwwLDAuNywwLDEsMAoJYzEyLjUtMC4yLDI0LjEtMy43LDM0LjUtMTFjNi4zLTQuNSwxMS44LTkuOCwxNS45LTE2LjJsNy0xMC44aC0zMS40Yy0xLDAtMiwwLjQtMi44LDEuMWMtNi41LDUuOS0xMy41LDkuMi0yMi43LDkuNAoJYy0wLjIsMC0wLjIsMC0wLjUsMGMtOC40LDAtMTUuNy0yLjYtMjEuNy04Yy00LjEtMy41LTcuMi03LjctOC45LTEyLjRoOTAuMVY1N0gyODkuN3ogTTIwMC41LDQ1LjFjMS45LTQsNC44LTcuNSw4LjQtMTAuMwoJYzYtNC43LDEyLjgtNywyMC43LTdjMC4yLDAsMC4yLDAsMC41LDBjOC4yLDAsMTQuOSwyLjMsMjAuNyw3LjNjMy42LDIuOCw2LjMsNi4zLDguMiwxMC4xSDIwMC41eiIvPgo8cGF0aCBjbGFzcz0ic3QwIiBkPSJNNDQ0LjksMTUuMUM0MzYuNyw2LjcsNDI2LjEsMiw0MTMuMSwwLjhjLTE0LjItMS4yLTI2LjUsMy43LTM2LjEsMTMuOGMtOS42LTEwLjMtMjEuNy0xNS0zNi4xLTEzLjgKCWMtMTMsMS4yLTIzLjYsNS45LTMxLjYsMTQuM2MtOC43LDguOS0xMywyMC42LTEzLDM0Ljl2NjYuNWgyOC43VjQ4LjRjMC02LjMsMS43LTExLjIsNS4xLTE1LjVjMy4xLTMuNyw3LTUuNCwxMi01LjQKCWM1LjgsMCwxMC42LDEuNiwxNC43LDUuNGMzLjksMy41LDUuOCw3LjUsNS44LDEyLjd2NzFoMjguOVY0NS4zYzAtNS4yLDEuOS05LjEsNS44LTEyLjdjNC4xLTMuNSw4LjktNS40LDE0LjctNS40CgljNS4zLDAsOS4yLDEuOSwxMi4zLDUuNmMzLjYsNC4yLDUuMyw5LjEsNS4zLDE1LjJ2NjguMmgyOC43VjUwQzQ1OC4xLDM1LjcsNDUzLjYsMjQsNDQ0LjksMTUuMXoiLz4KPHBhdGggY2xhc3M9InN0MCIgZD0iTTYxNiwxNS4xQzYwNy44LDYuNyw1OTcuMiwyLDU4NC4yLDAuOEM1NzAtMC40LDU1Ny43LDQuNiw1NDgsMTQuNmMtOS42LTEwLjMtMjEuNy0xNS0zNi4xLTEzLjgKCWMtMTMsMS4yLTIzLjYsNS45LTMxLjYsMTQuM2MtOC43LDguOS0xMywyMC42LTEzLDM0Ljl2NjYuNUg0OTZWNDguNGMwLTYuMywxLjctMTEuMiw1LjEtMTUuNWMzLjEtMy43LDctNS40LDEyLTUuNAoJYzUuOCwwLDEwLjYsMS42LDE0LjcsNS40YzMuOSwzLjUsNS44LDcuNSw1LjgsMTIuN3Y3MWgyOC45VjQ1LjNjMC01LjIsMS45LTkuMSw1LjgtMTIuN2M0LjEtMy41LDguOS01LjQsMTQuNy01LjQKCWM1LjMsMCw5LjIsMS45LDEyLjMsNS42YzMuNiw0LjIsNS4zLDkuMSw1LjMsMTUuMnY2OC4ySDYyOVY1MEM2MjksMzUuNyw2MjQuNywyNCw2MTYsMTUuMXoiLz4KPHBhdGggY2xhc3M9InN0MCIgZD0iTTczNy43LDE4LjZDNzI2LjQsNy4xLDcxMi42LDEsNjk2LjUsMC42Yy0xNi45LTAuNS0zMS4zLDUuMi00My40LDE3LjFDNjQxLDI5LjQsNjM1LDQzLjcsNjM1LDYwLjEKCWMwLDE1LjcsNS41LDI5LjUsMTYuOSw0MWMxMS4xLDExLjUsMjUuMSwxNy42LDQxLjIsMTcuOGMwLjcsMCwxLjQsMCwyLjIsMGMxNS45LDAsMjkuNi01LjYsNDEuNS0xNy4xYzEyLTExLjcsMTguMS0yNS44LDE4LjEtNDEuOQoJQzc1NC42LDQzLjksNzQ5LDMwLjEsNzM3LjcsMTguNnogTTY5NC41LDkwLjhjLTE3LjYsMC0zMS44LTEzLjgtMzEuOC0zMC45czYzLjktMTcuMSw2My45LDBDNzI2LjQsNzYuNyw3MTIuMSw5MC44LDY5NC41LDkwLjh6Ii8+Cjwvc3ZnPgo="
+
+/***/ }),
+/* 33 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "static/bidsterlogo.a7555168.png";
 
 /***/ }),
-/* 33 */
+/* 34 */
 /***/ (function(module, exports) {
 
 module.exports = "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+DQo8c3ZnDQogICB4bWxuczpkYz0iaHR0cDovL3B1cmwub3JnL2RjL2VsZW1lbnRzLzEuMS8iDQogICB4bWxuczpjYz0iaHR0cDovL2NyZWF0aXZlY29tbW9ucy5vcmcvbnMjIg0KICAgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIg0KICAgeG1sbnM6c3ZnPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyINCiAgIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyINCiAgIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIg0KICAgeG1sbnM6c29kaXBvZGk9Imh0dHA6Ly9zb2RpcG9kaS5zb3VyY2Vmb3JnZS5uZXQvRFREL3NvZGlwb2RpLTAuZHRkIg0KICAgeG1sbnM6aW5rc2NhcGU9Imh0dHA6Ly93d3cuaW5rc2NhcGUub3JnL25hbWVzcGFjZXMvaW5rc2NhcGUiDQogICB2ZXJzaW9uPSIxLjEiDQogICBpZD0iTGF5ZXJfMSINCiAgIHg9IjBweCINCiAgIHk9IjBweCINCiAgIHdpZHRoPSI1NTYiDQogICBoZWlnaHQ9IjM4MSINCiAgIHZpZXdCb3g9IjAgMCA1NTYgMzgxIg0KICAgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgNTk1IDg0MiINCiAgIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPHBhdGgNCiAgIHN0eWxlPSJmaWxsOiMyMzFGMjAiDQogICBpZD0icGF0aDMxOS0wIg0KICAgZD0ibSAzMDcuNTAyLDc0MS42NDQgYyAtMC43NjgsNS4zNDMgLTUuNDkzLDUuNTgxIC04LjY1NSw1LjQwNCAtMC4yMjMsLTAuMDEyIC0wLjQ1NywtMC4wNTIgLTAuNjQ2LC0wLjA3NCAtMC4yOTcsLTAuMDM0IC0wLjMxOCwtMC4zNzEgLTAuMDYzLC0wLjQ4MiAwLjY0MiwtMC4yODIgMy44MDksLTEuOTk2IDQuMTUzLC01LjYyNSAwLjA3MSwtMC43NDkgMC4wNjksLTEuNzkzIDAuMDY5LC0xLjk5NSBWIDcyNC44NSBoIDUuMjI5IHYgMTQuMjExIGMgMTBlLTQsMS42NTkgLTAuMDQzLDIuMjc5IC0wLjA4NywyLjU4MyINCiAgIGNsaXAtcGF0aD0idXJsKCNTVkdJRF8xMF8tMSkiDQogICB0cmFuc2Zvcm09Im1hdHJpeCg3LjcwMzM1MDIsMCwwLDcuNzAzMzUwMiwtMjAwMy4yNzE2LC01NTgwLjc4NDUpIiAvPjxwYXRoDQogICBzdHlsZT0iZmlsbDojMjMxRjIwIg0KICAgaWQ9InBhdGgzMjEtOSINCiAgIGQ9Im0gMzAxLjcxNCw3NTYuNTg1IGMgMC4yMTcsLTUuNDggNC43MDksLTkuMjU0IDExLjY1OCwtOS4yNTQgNC44MTUsMCAxNi41NzUsMCAxOC42NzgsMCAwLjI1NywwIDAuMzIxLDAuMTY0IDAuMTc4LDAuNDM3IC0wLjY4MSwxLjI5NiAtMi44NzEsNS4wMjEgLTUuNTgzLDUuMDIxIDAsMCAtOC42MDgsMCAtMTAuODcxLDAgLTYuMDA2LDAgLTEwLjAyNywzLjI3MyAtMTEuMTc5LDYuNjM4IC0wLjIwOSwwLjYxMyAtMC44MDEsMi4wNzUgLTEuNjU1LDIuMDc1IC0xLjE2OSwwIC0xLjM1NiwtMS41ODEgLTEuMjI2LC00LjkxNyINCiAgIGNsaXAtcGF0aD0idXJsKCNTVkdJRF8xMF8tMSkiDQogICB0cmFuc2Zvcm09Im1hdHJpeCg3LjcwMzM1MDIsMCwwLDcuNzAzMzUwMiwtMjAwMy4yNzE2LC01NTgwLjc4NDUpIiAvPjxwYXRoDQogICBzdHlsZT0iZmlsbDojMjMxRjIwIg0KICAgaWQ9InBhdGgzMjMtNCINCiAgIGQ9Im0gMjkwLjU2Niw3NTYuNTg1IGMgLTAuMjE3LC01LjQ4IC00LjcxLC05LjI1NCAtMTEuNjU5LC05LjI1NCAtNC44MTUsMCAtMTYuNTc0LDAgLTE4LjY3NywwIC0wLjI1NywwIC0wLjMyMSwwLjE2NCAtMC4xNzgsMC40MzcgMC42NzksMS4yOTYgMi44NzIsNS4wMjEgNS41ODIsNS4wMjEgMCwwIDguNjA5LDAgMTAuODcyLDAgNi4wMDYsMCAxMC4wMjgsMy4yNzMgMTEuMTgsNi42MzggMC4yMDksMC42MTMgMC43OTksMi4wNzUgMS42NTMsMi4wNzUgMS4xNzMsMCAxLjM1OCwtMS41ODEgMS4yMjcsLTQuOTE3Ig0KICAgY2xpcC1wYXRoPSJ1cmwoI1NWR0lEXzEwXy0xKSINCiAgIHRyYW5zZm9ybT0ibWF0cml4KDcuNzAzMzUwMiwwLDAsNy43MDMzNTAyLC0yMDAzLjI3MTYsLTU1ODAuNzg0NSkiIC8+PHBhdGgNCiAgIHN0eWxlPSJmaWxsOiMyMzFGMjAiDQogICBpZD0icGF0aDMyNS04Ig0KICAgZD0ibSAyOTYuMTQsNzY3LjkzMiBjIDMuOTExLDAgNy44MzcsLTIuMDYzIDkuNDgxLC00LjMxMyAyLjAzNiwtMi43OTIgMi40MDUsLTcuODYyIDExLjUyMSwtNy44NjIgaCA4LjEyMyBjIDAsMCAwLjI2LDAuMTM3IDAuMTM5LDAuMzY2IC0wLjY4NiwxLjI3OCAtMy4xNDcsNS40OTUgLTUuOTI4LDUuNDk1IGggLTMuNzQ3IGMgLTIuMDIyLDAgLTIuNDk0LDEuMzg2IC0zLjQ2NywzLjAxMyAtMi44NjIsNS41MzMgLTguNTE0LDkuMjkxIC0xNi4xMjMsOS4yOTEgLTcuNjA5LDAgLTEzLjI1OSwtMy43NTggLTE2LjEyMywtOS4yOTEgLTAuOTczLC0xLjYyNyAtMS40NDQsLTMuMDEzIC0zLjQ2NywtMy4wMTMgaCAtMy43NDQgYyAtMi43ODMsMCAtNS4yNDUsLTQuMjE3IC01LjkyOCwtNS40OTUgLTAuMTI0LC0wLjIyOSAwLjEzNCwtMC4zNjYgMC4xMzQsLTAuMzY2IGggOC4xMjQgYyA5LjExNywwIDkuNDg2LDUuMDcgMTEuNTIzLDcuODYyIDEuNjQzLDIuMjQ5IDUuNTcyLDQuMzEzIDkuNDgyLDQuMzEzIg0KICAgY2xpcC1wYXRoPSJ1cmwoI1NWR0lEXzEwXy0xKSINCiAgIHRyYW5zZm9ybT0ibWF0cml4KDcuNzAzMzUwMiwwLDAsNy43MDMzNTAyLC0yMDAzLjI3MTYsLTU1ODAuNzg0NSkiIC8+PHBhdGgNCiAgIHN0eWxlPSJmaWxsOiMyMzFGMjAiDQogICBpZD0icGF0aDMyNy04Ig0KICAgZD0ibSAyOTguMDA1LDcyNS41MzkgdiAzLjQxOSBjIDAsMCAtMi43MSwtMS4zMTMgLTQuNzU4LC0xLjMxMyAtMi4wNDIsMCAtMy41ODYsMC43MjYgLTMuNTg2LDIuMjI5IDAsMS44NjcgMy40NzcsMi43NDcgNC43NTQsMy4xOTEgMS4yNzcsMC40NDMgNS4wNTgsMi4xMDYgNS4wNTgsNS40ODkgMCwzLjU4OCAtMS45NzIsNi44OCAtOC44MTIsNi44OCAtMy42MDIsMCAtNS42NTksLTEuMTE3IC01LjY1OSwtMS4xMTcgdiAtMy4zODIgYyAxLjE4OSwwLjQ0NyAzLjg2NCwxLjExNiA1LjI0MSwxLjExNiAyLjM0MywwIDMuNzU1LC0wLjUwNSAzLjc1NSwtMi4wMiAwLC0xLjkxOSAtMy42NzIsLTIuOTM2IC01LjA5LC0zLjUyIC0xLjQxOSwtMC41ODQgLTQuNjczLC0xLjk2MyAtNC42NzMsLTUuODg3IDAsLTQuMzc0IDMuOTIyLC02LjE2NCA4LjU5MywtNi4xNjQgMy4xNzQsMC4wMDIgNS4xNzcsMS4wNzkgNS4xNzcsMS4wNzkiDQogICBjbGlwLXBhdGg9InVybCgjU1ZHSURfMTBfLTEpIg0KICAgdHJhbnNmb3JtPSJtYXRyaXgoNy43MDMzNTAyLDAsMCw3LjcwMzM1MDIsLTIwMDMuMjcxNiwtNTU4MC43ODQ1KSIgLz48L3N2Zz4="
 
 /***/ }),
-/* 34 */
+/* 35 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1749,10 +1769,10 @@ var ContactSection = function ContactSection() {
 exports.default = ContactSection;
 
 /***/ }),
-/* 35 */
+/* 36 */
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(36)(false);
+exports = module.exports = __webpack_require__(37)(false);
 // imports
 exports.push([module.i, "@import url(https://fonts.googleapis.com/css?family=Libre+Baskerville:400,700|Montserrat:400,700);", ""]);
 
@@ -1763,7 +1783,7 @@ exports.push([module.i, "figure{margin:0;padding:0}body,html{font-size:10px}body
 
 
 /***/ }),
-/* 36 */
+/* 37 */
 /***/ (function(module, exports) {
 
 /*
@@ -1847,4 +1867,4 @@ function toComment(sourceMap) {
 /***/ })
 /******/ ]);
 });
-//# sourceMappingURL=static.4e6eb2e3.js.map
+//# sourceMappingURL=static.c52d5e22.js.map
