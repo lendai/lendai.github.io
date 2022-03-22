@@ -11,14 +11,14 @@ import bidsterLogo from '../img/bidsterlogo.png'
 import sjLogo from '../img/sjlogo.svg'
 
 const memmo = {
-  title: 'Memmo ',
+  title: 'memmo.me ',
   slug: 'memmo',
   when: 'Nov 2019 - now',
   subtitle: 'CTO',
   logotype: memmoLogo,
   involved: '',
   description:
-    'Platform connecting talent with their following. Offering personalized video greetings. Node / GraphQL / React / React Native / Google Cloud.',
+    'Personalised video greetings from celebrities.<br />Scaled the team from 4 to 45 in <12 months.<br />Node / GraphQL / React / React Native / Google Cloud.',
 }
 
 const freelance = {
@@ -57,7 +57,7 @@ const dooer = {
   logotype: dooerLogo,
   involved: '',
   description:
-    'Fintech startup that acquired Agigen in 2016. Managed a team of about 30 developers, designers and team leads accross three locations. The project included microservices, GraphQL and machine learning.',
+    'Fintech startup that acquired Agigen in 2016. Managed a team of about 40 developers, designers and team leads accross three locations. The project included microservices, GraphQL and machine learning.',
 }
 
 const agigen = {
@@ -68,7 +68,7 @@ const agigen = {
   logotype: agigenLogo,
   involved: '',
   description:
-    'My first own company. A digital production agency focused on high profile marketing campaigns and product development. We were fifteen employees when acquired by Dooer.',
+    'My first own company. A digital production agency focused on high profile marketing campaigns and product development. We were fifteen employees when acquired by Dooer in 2016.',
 }
 
 const billogram = {
@@ -79,7 +79,7 @@ const billogram = {
   logotype: billoLogo,
   involved: '',
   description:
-    'The most successful product development project we ran at Agigen was Billogram. Billogram is an invoicing service focused on the customer experience. I worked as their CTO for the first four years, while also providing a team of consultants',
+    'The most successful product development project we ran at Agigen was Billogram. Billogram is an invoicing service focused on the customer experience. I worked as their CTO for the first four years, while also providing a team of consultants<br />Exited 2021',
 }
 
 const ahlens = {
