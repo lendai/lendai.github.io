@@ -475,7 +475,7 @@ var universalOptions = {
 
 var t_0 = (0, _reactUniversalComponent2.default)((0, _universalImport3.default)({
   id: '../src/containers/Home',
-  file: '/Users/lendai/Code/mauno/lendai.github.io/dist/react-static-routes.js',
+  file: '/Users/danielmp/Code/personal/lendai.github.io/dist/react-static-routes.js',
   load: function load() {
     return Promise.all([new Promise(function(resolve) { resolve(); }).then(__webpack_require__.bind(null, 5)), (0, _importCss3.default)('src/containers/Home', {
       disableWarnings: true
@@ -495,7 +495,7 @@ var t_0 = (0, _reactUniversalComponent2.default)((0, _universalImport3.default)(
 }), universalOptions);
 var t_1 = (0, _reactUniversalComponent2.default)((0, _universalImport3.default)({
   id: '../src/containers/404',
-  file: '/Users/lendai/Code/mauno/lendai.github.io/dist/react-static-routes.js',
+  file: '/Users/danielmp/Code/personal/lendai.github.io/dist/react-static-routes.js',
   load: function load() {
     return Promise.all([new Promise(function(resolve) { resolve(); }).then(__webpack_require__.bind(null, 6)), (0, _importCss3.default)('src/containers/404', {
       disableWarnings: true
@@ -1258,7 +1258,7 @@ var StartSection = function StartSection() {
       _react2.default.createElement(
         "div",
         null,
-        "Product Manager & Creative Developer."
+        "Product, Engineering & Strategy."
       )
     )
   );
@@ -1341,7 +1341,7 @@ var Projects = function Projects() {
       _react2.default.createElement(
         'h2',
         { className: 'space-above-section projects-section-title' },
-        'What I\'ve done so far'
+        "What I've done so far"
       ),
       _projects2.default.map(function (project) {
         return _react2.default.createElement(
@@ -1386,24 +1386,30 @@ var Projects = function Projects() {
                   project.subtitle
                 )
               ),
-              _react2.default.createElement(
-                'p',
-                { className: 'project__description' },
-                project.description
-              )
+              _react2.default.createElement('p', {
+                className: 'project__description',
+                dangerouslySetInnerHTML: { __html: project.description }
+              })
             )
           )
         );
       }),
       _react2.default.createElement(
         'div',
-        { style: {
-            width: '90%', margin: '60px auto', color: '#232323', fontSize: '15px', lineHeight: '1.6', textAlign: 'center'
-          } },
+        {
+          style: {
+            width: '90%',
+            margin: '60px auto',
+            color: '#232323',
+            fontSize: '15px',
+            lineHeight: '1.6',
+            textAlign: 'center'
+          }
+        },
         _react2.default.createElement(
           'p',
           null,
-          'During my time at Agigen I\'ve worked with a wide variety of high profile brands and agencys.',
+          "I've worked with a wide variety of high profile brands and agencys.",
           _react2.default.createElement('br', null),
           'A few of them are; ' + extraBrands.join(', ')
         ),
@@ -1516,13 +1522,13 @@ var _sjlogo2 = _interopRequireDefault(_sjlogo);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var memmo = {
-  title: 'Memmo ',
+  title: 'memmo.me ',
   slug: 'memmo',
   when: 'Nov 2019 - now',
   subtitle: 'CTO',
   logotype: _memmologo2.default,
   involved: '',
-  description: 'Platform connecting talent with their following. Offering personalized video greetings. Node / GraphQL / React / React Native / Google Cloud.'
+  description: 'Personalised video greetings from celebrities.<br />Scaled the team from 4 to 45 in <12 months.<br />Node / GraphQL / React / React Native / Google Cloud.'
 };
 
 var freelance = {
@@ -1562,7 +1568,7 @@ var dooer = {
   subtitle: 'Head of Product & Development',
   logotype: _dooerlogo2.default,
   involved: '',
-  description: 'Fintech startup that acquired Agigen in 2016. Managed a team of about 30 developers, designers and team leads accross three locations. The project included microservices, GraphQL and machine learning.'
+  description: 'Fintech startup that acquired Agigen in 2016. Managed a team of about 40 developers, designers and team leads accross three locations. The project included microservices, GraphQL and machine learning.'
 };
 
 var agigen = {
@@ -1572,7 +1578,7 @@ var agigen = {
   subtitle: 'CEO & Founder',
   logotype: _agigenlogo2.default,
   involved: '',
-  description: 'My first own company. A digital production agency focused on high profile marketing campaigns and product development. We were fifteen employees when acquired by Dooer.'
+  description: 'My first own company. A digital production agency focused on high profile marketing campaigns and product development. We were fifteen employees when acquired by Dooer in 2016.'
 };
 
 var billogram = {
@@ -1582,7 +1588,7 @@ var billogram = {
   subtitle: 'CTO',
   logotype: _billogramlogo2.default,
   involved: '',
-  description: 'The most successful product development project we ran at Agigen was Billogram. Billogram is an invoicing service focused on the customer experience. I worked as their CTO for the first four years, while also providing a team of consultants'
+  description: 'The most successful product development project we ran at Agigen was Billogram. Billogram is an invoicing service focused on the customer experience. I worked as their CTO for the first four years, while also providing a team of consultants<br />Exited 2021'
 };
 
 var ahlens = {
@@ -1867,4 +1873,4 @@ function toComment(sourceMap) {
 /***/ })
 /******/ ]);
 });
-//# sourceMappingURL=static.c52d5e22.js.map
+//# sourceMappingURL=static.6aa01ecd.js.map
