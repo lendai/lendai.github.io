@@ -1534,8 +1534,8 @@ var memmo = {
 var freelance = {
   title: 'Freelance ',
   slug: 'freelance',
-  when: 'May 2019 - Nov 2019',
-  subtitle: 'CTO / Fullstack developer',
+  when: 'May 2019 - now',
+  subtitle: 'CTO / Strategy consultant',
   logotype: function logotype() {
     return _react2.default.createElement(
       'div',
@@ -1568,7 +1568,7 @@ var dooer = {
   subtitle: 'Head of Product & Development',
   logotype: _dooerlogo2.default,
   involved: '',
-  description: 'Fintech startup that acquired Agigen in 2016. Managed a team of about 40 developers, designers and team leads accross three locations. The project included microservices, GraphQL and machine learning.'
+  description: 'Fintech startup that acquired Agigen (see below) in 2016. Managed a team of about 40 developers, designers and team leads accross three locations. The project included microservices, GraphQL and machine learning.'
 };
 
 var agigen = {
@@ -1641,7 +1641,7 @@ var uppcon = {
   description: 'Scandinavias largest event for youths interested in Japanese popular culture. A non-profit I founded which attracted around 5000 visitors during four days at its peak'
 };
 
-exports.default = [memmo, freelance, alchemy, dooer, agigen, billogram, ahlens, build, sj, uppcon, bidster];
+exports.default = [memmo, freelance, alchemy, dooer, billogram, agigen, ahlens, build, sj, uppcon, bidster];
 
 /***/ }),
 /* 25 */
@@ -1873,4 +1873,4 @@ function toComment(sourceMap) {
 /***/ })
 /******/ ]);
 });
-//# sourceMappingURL=static.6aa01ecd.js.map
+//# sourceMappingURL=static.8ef5aacc.js.map
