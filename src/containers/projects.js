@@ -24,8 +24,8 @@ const memmo = {
 const freelance = {
   title: 'Freelance ',
   slug: 'freelance',
-  when: 'May 2019 - Nov 2019',
-  subtitle: 'CTO / Fullstack developer',
+  when: 'May 2019 - now',
+  subtitle: 'CTO / Strategy consultant',
   logotype: () => (
     <div style={{ fontSize: 50 }}>
       <span role="img" aria-label="Coffee emoji">
@@ -57,7 +57,7 @@ const dooer = {
   logotype: dooerLogo,
   involved: '',
   description:
-    'Fintech startup that acquired Agigen in 2016. Managed a team of about 40 developers, designers and team leads accross three locations. The project included microservices, GraphQL and machine learning.',
+    'Fintech startup that acquired Agigen (see below) in 2016. Managed a team of about 40 developers, designers and team leads accross three locations. The project included microservices, GraphQL and machine learning.',
 }
 
 const agigen = {
@@ -142,8 +142,8 @@ export default [
   freelance,
   alchemy,
   dooer,
-  agigen,
   billogram,
+  agigen,
   ahlens,
   build,
   sj,
