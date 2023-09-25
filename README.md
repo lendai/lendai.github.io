@@ -5,6 +5,7 @@ Simple website about myself.
 ## Developing
 
 ```sh
+nvm use 16
 yarn
 yarn start
 ```
