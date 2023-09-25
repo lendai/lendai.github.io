@@ -1,4 +1,5 @@
 import React from 'react'
+import qaTechLogo from '../img/qatech.svg'
 import dooerLogo from '../img/dooerlogo.svg'
 import agigenLogo from '../img/agigenlogo.png'
 import alchemyLogo from '../img/alchemylogo.svg'
@@ -10,15 +11,25 @@ import memmoLogo from '../img/memmologo.svg'
 import bidsterLogo from '../img/bidsterlogo.png'
 import sjLogo from '../img/sjlogo.svg'
 
+const qaTech = {
+  title: 'QA.tech',
+  slug: 'qa-dot-tech',
+  when: 'June 2023 - now',
+  subtitle: 'CEO & Founder',
+  logotype: qaTechLogo,
+  description: 'Your Autonomous QA Engineer. We enable developers to focus on building products, rather than testing. VC backed.',
+}
+
 const memmo = {
   title: 'memmo.me ',
   slug: 'memmo',
-  when: 'Nov 2019 - now',
+  when: 'Nov 2019 - Dec 2022',
   subtitle: 'CTO',
   logotype: memmoLogo,
   involved: '',
+  crunchbase: 'https://www.crunchbase.com/organization/memmo/company_financials',
   description:
-    'Personalised video greetings from celebrities.<br />Scaled the team from 4 to 45 in <12 months.<br />Node / GraphQL / React / React Native / Google Cloud.',
+    'memmo is a platform that sells personalised video greetings from celebrities. Customers browse the site, finds a celebrity they like, makes an order that specifies what the celebrity should say in the video.<br />The celebrity uses our app to record and deliver the video to the customer.<br>Market leader in Europe. 3000+ celebrities, 12 countries, <br>Tech platform: NextJS, Node, Google Cloud, Postgres, React Native<br>I was part of the founding team, built the first version of the platform myself. <br>Scaled the team from 4 to 45 persons in less than 12 months.',
 }
 
 const freelance = {
@@ -55,6 +66,7 @@ const dooer = {
   when: '2016 - Summer 2018',
   subtitle: 'Head of Product & Development',
   logotype: dooerLogo,
+  crunchbase: 'https://www.crunchbase.com/organization/dooer',
   involved: '',
   description:
     'Fintech startup that acquired Agigen (see below) in 2016. Managed a team of about 40 developers, designers and team leads accross three locations. The project included microservices, GraphQL and machine learning.',
@@ -78,8 +90,9 @@ const billogram = {
   subtitle: 'CTO',
   logotype: billoLogo,
   involved: '',
+  crunchbase: 'https://www.crunchbase.com/organization/billogram',
   description:
-    'The most successful product development project we ran at Agigen was Billogram. Billogram is an invoicing service focused on the customer experience. I worked as their CTO for the first four years, while also providing a team of consultants<br />Exited 2021',
+    'Billogram is an invoicing service focused on the customer experience. I worked as their CTO for the first four years, and built the first version and techincal architecture. while also providing a team of consultants<br />Exited 2021',
 }
 
 const ahlens = {
@@ -137,13 +150,15 @@ const uppcon = {
     'Scandinavias largest event for youths interested in Japanese popular culture. A non-profit I founded which attracted around 5000 visitors during four days at its peak',
 }
 
+
 export default [
+  qaTech,
   memmo,
   freelance,
-  alchemy,
   dooer,
   billogram,
   agigen,
+  alchemy,
   ahlens,
   build,
   sj,
